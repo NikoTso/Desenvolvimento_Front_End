@@ -8,17 +8,23 @@
 </head>
 
 <body>
+
     <header>
         <h1>Gerenciador de Tarefas Acadêmicas</h1>
         <p>Quadro de organização de tarefas de projetos</p>
     </header>
+
     <main>
         <section aria-labelledby="titulo-filtros">  
+
             <h2 id="titulo-filtros">Busca</h2>
+
             <form>
                 <label for="busca">Buscar tarefa por título:</label>
                 <input type="search" id="busca" name="busca">
+
                 <fieldset>
+
                     <legend>Status</legend>
                     <label>
                         <input type="radio" name="status">
@@ -43,6 +49,7 @@
                 </fieldset>
 
                 <fieldset>
+
                     <legend>Prioridade</legend>
 
                     <label>
@@ -57,9 +64,41 @@
                         <input type="radio" name="prioridade">
                         Alta
                     </label>
+
                 </fieldset>
+
             </form>
+
         </section>
+        <section aria-labelledby="fazer">
+
+            <h2 id="fazer">A fazer</h2>
+            <ul>
+            </ul>
+
+        </section>
+        <section aria-labelledby="andamento">
+
+            <h2 id="andamento">Em andamento</h2>
+            <ul>
+            </ul>
+
+        </section>
+        <section aria-labelledby="revisao">
+
+            <h2 id="revisao">Em revisão</h2>
+            <ul>
+            </ul>
+
+        </section>
+        <section aria-labelledby="concluida">
+
+            <h2 id="concluida">Concluída</h2>
+            <ul>
+            </ul>
+
+        </section>
+
     </main>
 </body>
 
