@@ -84,3 +84,76 @@ main {
     flex-direction: column;
     gap: var(--space-4);
 }
+
+.filtros {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: var(--space-3);
+}
+
+.filtros h2 {
+    margin-top: 0;
+}
+
+.filtros form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.campo-busca {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    max-width: 30rem;
+}
+
+.campo-busca label {
+    font-weight: 600;
+}
+
+.campo-busca input[type="search"] {
+    min-height: 2.75rem;
+    padding: 0.625rem 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+}
+
+fieldset.opcoes {
+    margin: 0;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-2);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+fieldset.opcoes legend {
+    flex-basis: 100%;
+    font-weight: 600;
+    padding-inline: 0.25rem;
+}
+
+.opcao {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 2rem;
+    padding: 0.375rem 0.625rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+.opcao:hover {
+    background: var(--color-surface-alt);
+}
+
+.opcao input[type="radio"] {
+    width: 1.25rem;
+    height: 1.25rem;
+    accent-color: var(--color-focus);
+}
