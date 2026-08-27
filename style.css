@@ -157,3 +157,60 @@ fieldset.opcoes legend {
     height: 1.25rem;
     accent-color: var(--color-focus);
 }
+
+.tarefa {
+    background: var(--color-surface-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-2);
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    min-width: 0;
+}
+
+.tarefa__titulo {
+    margin: 0;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: clamp(1rem, 0.93rem + 0.35vw, 1.15rem);
+}
+
+.tarefa p {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+.tarefa__prioridade {
+    display: inline-flex;
+    width: fit-content;
+    padding: 0.125rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.tarefa__prioridade--baixa {
+    background: var(--priority-baixa-bg);
+    color: var(--priority-baixa-text);
+}
+
+.tarefa__prioridade--media {
+    background: var(--priority-media-bg);
+    color: var(--priority-media-text);
+}
+
+.tarefa__prioridade--alta {
+    background: var(--priority-alta-bg);
+    color: var(--priority-alta-text);
+}
+
+.tarefa__prazo {
+    margin-top: auto;
+    padding-top: 0.375rem;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.8rem;
+}
