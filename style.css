@@ -257,3 +257,17 @@ fieldset.opcoes legend {
 .coluna li {
     min-width: 0;
 }
+
+/*Aqui irei trata sobre a reponsividade do site, em questão de tela de celular e de computador */
+
+@media (min-width: 40em) {
+    .quadro {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 64em) {
+    .quadro {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
