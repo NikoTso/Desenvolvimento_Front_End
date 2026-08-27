@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciador de Tarefas Acadêmicas</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -15,162 +16,158 @@
     </header>
 
     <main>
-        <section aria-labelledby="titulo-filtros">  
+        <section class="filtros" aria-labelledby="titulo-filtros">
 
             <h2 id="titulo-filtros">Busca</h2>
 
             <form>
-                <label for="busca">Buscar tarefa por título:</label>
-                <input type="search" id="busca" name="busca">
+                <div class="campo-busca">
+                    <label for="busca">Buscar tarefa por título:</label>
+                    <input type="search" id="busca" name="busca">
+                </div>
 
-                <fieldset>
-
+                <fieldset class="opcoes">
                     <legend>Status</legend>
-                    <label>
+                    <label class="opcao">
                         <input type="radio" name="status">
                         Todos
                     </label>
-                    <label>
+                    <label class="opcao">
                         <input type="radio" name="status">
                         A fazer
                     </label>
-                    <label>
+                    <label class="opcao">
                         <input type="radio" name="status">
                         Em andamento
                     </label>
-                    <label>
+                    <label class="opcao">
                         <input type="radio" name="status">
                         Em revisão
                     </label>
-                    <label>
+                    <label class="opcao">
                         <input type="radio" name="status">
                         Concluída
                     </label>
                 </fieldset>
 
-                <fieldset>
-
+                <fieldset class="opcoes">
                     <legend>Prioridade</legend>
-
-                    <label>
+                    <label class="opcao">
                         <input type="radio" name="prioridade">
                         Baixa
                     </label>
-                    <label>
+                    <label class="opcao">
                         <input type="radio" name="prioridade">
                         Média
                     </label>
-                    <label>
+                    <label class="opcao">
                         <input type="radio" name="prioridade">
                         Alta
                     </label>
-
                 </fieldset>
-
             </form>
 
         </section>
-        <section aria-labelledby="fazer">
 
-            <h2 id="fazer">A fazer</h2>
-            <ul>
-                <li>
-                    <article>
-                        <h3>Planejar estrutura do sistema</h3>
-                        <p>Projeto: Sistema Acadêmico</p>
-                        <p>Responsável: Gabriel Oliveira</p>
-                        <p>Prazo: 15/08/2026</p>
-                        <p>Prioridade: Média</p>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <h3>Criar protótipo das telas</h3>
-                        <p>Projeto: Sistema Acadêmico</p>
-                        <p>Responsável: Gabriel Oliveira</p>
-                        <p>Prazo: 18/08/2026</p>
-                        <p>Prioridade: Baixa</p>
-                    </article>
-                </li>
-            </ul>
+        <div class="quadro">
 
-        </section>
-        <section aria-labelledby="andamento">
+            <section class="coluna coluna--fazer" aria-labelledby="fazer">
+                <h2 id="fazer">A fazer</h2>
+                <ul>
+                    <li>
+                        <article class="tarefa">
+                            <h3 class="tarefa__titulo">Planejar estrutura do sistema</h3>
+                            <p>Projeto: Sistema Acadêmico</p>
+                            <p>Responsável: Gabriel Oliveira</p>
+                            <p class="tarefa__prioridade tarefa__prioridade--media">Prioridade: Média</p>
+                            <p class="tarefa__prazo">Prazo: 15/08/2026</p>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="tarefa">
+                            <h3 class="tarefa__titulo">Criar protótipo das telas</h3>
+                            <p>Projeto: Sistema Acadêmico</p>
+                            <p>Responsável: Gabriel Oliveira</p>
+                            <p class="tarefa__prioridade tarefa__prioridade--baixa">Prioridade: Baixa</p>
+                            <p class="tarefa__prazo">Prazo: 18/08/2026</p>
+                        </article>
+                    </li>
+                </ul>
+            </section>
 
-            <h2 id="andamento">Em andamento</h2>
-            <ul>
-                <li>
-                    <article>
-                        <h3>Criar banco de dados</h3>
-                        <p>Projeto: Sistema Acadêmico</p>
-                        <p>Responsável: Gabriel Oliveira</p>
-                        <p>Prazo: 17/08/2026</p>
-                        <p>Prioridade: Alta</p>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <h3>Desenvolver autenticação de usuários</h3>
-                        <p>Projeto: Sistema Acadêmico</p>
-                        <p>Responsável: Gabriel Oliveira</p>
-                        <p>Prazo: 20/08/2026</p>
-                        <p>Prioridade: Alta</p>
-                    </article>
-                </li>
-            </ul>
+            <section class="coluna coluna--andamento" aria-labelledby="andamento">
+                <h2 id="andamento">Em andamento</h2>
+                <ul>
+                    <li>
+                        <article class="tarefa">
+                            <h3 class="tarefa__titulo">Criar banco de dados</h3>
+                            <p>Projeto: Sistema Acadêmico</p>
+                            <p>Responsável: Gabriel Oliveira</p>
+                            <p class="tarefa__prioridade tarefa__prioridade--alta">Prioridade: Alta</p>
+                            <p class="tarefa__prazo">Prazo: 17/08/2026</p>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="tarefa">
+                            <h3 class="tarefa__titulo">Desenvolver autenticação de usuários</h3>
+                            <p>Projeto: Sistema Acadêmico</p>
+                            <p>Responsável: Gabriel Oliveira</p>
+                            <p class="tarefa__prioridade tarefa__prioridade--alta">Prioridade: Alta</p>
+                            <p class="tarefa__prazo">Prazo: 20/08/2026</p>
+                        </article>
+                    </li>
+                </ul>
+            </section>
 
-        </section>
-        <section aria-labelledby="revisao">
+            <section class="coluna coluna--revisao" aria-labelledby="revisao">
+                <h2 id="revisao">Em revisão</h2>
+                <ul>
+                    <li>
+                        <article class="tarefa">
+                            <h3 class="tarefa__titulo">Testar cadastro de alunos</h3>
+                            <p>Projeto: Sistema Acadêmico</p>
+                            <p>Responsável: Gabriel Oliveira</p>
+                            <p class="tarefa__prioridade tarefa__prioridade--media">Prioridade: Média</p>
+                            <p class="tarefa__prazo">Prazo: 22/08/2026</p>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="tarefa">
+                            <h3 class="tarefa__titulo">Revisar documentação do projeto</h3>
+                            <p>Projeto: Sistema Acadêmico</p>
+                            <p>Responsável: Gabriel Oliveira</p>
+                            <p class="tarefa__prioridade tarefa__prioridade--baixa">Prioridade: Baixa</p>
+                            <p class="tarefa__prazo">Prazo: 25/08/2026</p>
+                        </article>
+                    </li>
+                </ul>
+            </section>
 
-            <h2 id="revisao">Em revisão</h2>
-            <ul>
-                <li>
-                    <article>
-                        <h3>Testar cadastro de alunos</h3>
-                        <p>Projeto: Sistema Acadêmico</p>
-                        <p>Responsável: Gabriel Oliveira</p>
-                        <p>Prazo: 22/08/2026</p>
-                        <p>Prioridade: Média</p>
-                    </article>
-                </li>
+            <section class="coluna coluna--concluida" aria-labelledby="concluida">
+                <h2 id="concluida">Concluída</h2>
+                <ul>
+                    <li>
+                        <article class="tarefa">
+                            <h3 class="tarefa__titulo">Criar tela inicial</h3>
+                            <p>Projeto: Sistema acadêmico</p>
+                            <p>Responsável: Gabriel Oliveira</p>
+                            <p class="tarefa__prioridade tarefa__prioridade--alta">Prioridade: Alta</p>
+                            <p class="tarefa__prazo">Prazo: 12/08/2026</p>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="tarefa">
+                            <h3 class="tarefa__titulo">Pesquisar referências</h3>
+                            <p>Projeto: Sistema acadêmico</p>
+                            <p>Responsável: Gabriel Oliveira</p>
+                            <p class="tarefa__prioridade tarefa__prioridade--baixa">Prioridade: baixa</p>
+                            <p class="tarefa__prazo">Prazo: 12/08/2026</p>
+                        </article>
+                    </li>
+                </ul>
+            </section>
 
-                <li>
-                    <article>
-                        <h3>Revisar documentação do projeto</h3>
-                        <p>Projeto: Sistema Acadêmico</p>
-                        <p>Responsável: Gabriel Oliveira</p>
-                        <p>Prazo: 25/08/2026</p>
-                        <p>Prioridade: Baixa</p>
-                    </article>
-                </li>
-            </ul>
-
-        </section>
-        <section aria-labelledby="concluida">
-
-            <h2 id="concluida">Concluída</h2>
-            <ul>
-                <li>
-                    <article>
-                        <h3>Criar tela inicial</h3>
-                        <p>Projeto: Sistema acadêmico</p>
-                        <p>Responsável: Gabriel Oliveira</p>
-                        <p>Prazo: 12/08/2026</p>
-                        <p>Prioridade: Alta</p>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <h3>Pesquisar referências</h3>
-                        <p>Projeto: Sistema acadêmico</p>
-                        <p>Responsável: Gabriel Oliveira</p>
-                        <p>Prazo: 12/08/2026</p>
-                        <p>Prioridade: baixa</p>
-                    </article>
-                </li>
-            </ul>
-
-        </section>
+        </div>
 
     </main>
 
