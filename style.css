@@ -9,3 +9,30 @@ body {
     color: var(--color-text);
     background: var(--color-surface-alt);
 }
+
+/* Aqui estarei adicionando as cores que irei utiilizar na atividade, como cores de pririoridade, status e entre outros. */
+
+:root {
+    --color-surface: #ffffff;
+    --color-surface-alt: #f4f5f7;
+    --color-text: #1b1f24;
+    --color-text-muted: #4b5563;
+    --color-border: #d0d5dd;
+    --color-focus: #1d4ed8;
+    --status-fazer: #b45309;
+    --status-andamento: #1d4ed8;
+    --status-revisao: #7c3aed;
+    --status-concluida: #15803d;
+    --priority-baixa-bg: #e5e7eb;
+    --priority-baixa-text: #374151;
+    --priority-media-bg: #fef3c7;
+    --priority-media-text: #92400e;
+    --priority-alta-bg: #fee2e2;
+    --priority-alta-text: #991b1b;
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2.5rem;
+    --radius: 0.5rem;
+    --radius-sm: 0.25rem;
+}
