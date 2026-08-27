@@ -10,7 +10,7 @@ body {
     background: var(--color-surface-alt);
 }
 
-/* Aqui estarei adicionando as cores que irei utiilizar na atividade, como cores de pririoridade, status e entre outros. */
+/* Aqui estarei adicionando as cores e formas que irei utiilizar na atividade, como cores de pririoridade, status e entre outros. */
 
 :root {
     --color-surface: #ffffff;
