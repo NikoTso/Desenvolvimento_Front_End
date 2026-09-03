@@ -1,0 +1,60 @@
+{
+    "tarefas": [
+        {
+            "id": 1,
+            "titulo": "Planejar estrutura do sistema",
+            "status": "fazer",
+            "prioridade": "media",
+            "prazo": "15/09/2026"
+        },
+        {
+            "id": 2,
+            "titulo": "Criar protótipo das telas",
+            "status": "fazer",
+            "prioridade": "baixa",
+            "prazo": "18/09/2026"
+        },
+        {
+            "id": 3,
+            "titulo": "Criar banco de dados",
+            "status": "andamento",
+            "prioridade": "alta",
+            "prazo": "20/09/2026"
+        },
+        {
+            "id": 4,
+            "titulo": "Desenvolver autenticação de usuários",
+            "status": "andamento",
+            "prioridade": "alta",
+            "prazo": "22/09/2026"
+        },
+        {
+            "id": 5,
+            "titulo": "Testar cadastro de alunos",
+            "status": "revisao",
+            "prioridade": "media",
+            "prazo": "24/09/2026"
+        },
+        {
+            "id": 6,
+            "titulo": "Revisar documentação do projeto",
+            "status": "revisao",
+            "prioridade": "baixa",
+            "prazo": "25/09/2026"
+        },
+        {
+            "id": 7,
+            "titulo": "Criar tela inicial",
+            "status": "concluida",
+            "prioridade": "alta",
+            "prazo": "12/09/2026"
+        },
+        {
+            "id": 8,
+            "titulo": "Pesquisar referências",
+            "status": "concluida",
+            "prioridade": "baixa",
+            "prazo": "12/09/2026"
+        }
+    ]
+}
