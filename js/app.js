@@ -1,9 +1,7 @@
 import { carregarTarefas } from "./api.js";
 import { renderizarEstado } from "./estados.js";
-import { limparTarefas, renderizarTarefas } from "./renderizacao.js";
 
-async function iniciar() {
-    limparTarefas();
+async function iniciarAplicacao() {
     renderizarEstado("carregando");
 
     try {
@@ -14,19 +12,22 @@ async function iniciar() {
             return;
         }
 
-        renderizarTarefas(tarefas);
         renderizarEstado("sucesso", tarefas);
     } catch (erro) {
-        limparTarefas();
+        let mensagem = "Não foi possível carregar as tarefas.";
 
-        if (erro.name === "FormatoError" || erro.name === "SyntaxError") {
-            renderizarEstado("erro", "Os dados recebidos estão em um formato inválido.");
-        } else if (erro.name === "TypeError") {
-            renderizarEstado("erro", "Falha de rede ao tentar carregar as tarefas. Verifique sua conexão.");
-        } else {
-            renderizarEstado("erro", "Não foi possível carregar as tarefas.");
+        if (erro.name === "TypeError") {
+            mensagem = "Erro de rede: não foi possível acessar os dados.";
+        } else if (erro.name === "SyntaxError") {
+            mensagem = "Erro de formato: o arquivo JSON está inválido.";
+        } else if (erro.message.startsWith("HTTP")) {
+            mensagem = `Erro de protocolo: o servidor respondeu com ${erro.message}.`;
+        } else if (erro.name === "FormatoError") {
+            mensagem = "Erro de formato: os dados não possuem a estrutura esperada.";
         }
+
+        renderizarEstado("erro", { mensagem });
     }
 }
 
-iniciar();
+iniciarAplicacao();
